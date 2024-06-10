@@ -126,6 +126,7 @@ experiments_model/
 unreleased/
 results_eval/
 results/
+inputs/
 *debug*
 *old*
 *.sh
