@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "propainter"
+version = "0.1.0"
+description = "ProPainter video inpainting packaged for Python"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "S-Lab License 1.0 (see LICENSE)" }
+authors = [
+    { name = "Emanuele Artioli" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "av",
+    "addict",
+    "einops",
+    "future",
+    "numpy",
+    "scipy",
+    "opencv-python",
+    "matplotlib",
+    "scikit-image",
+    "torch>=1.7.1",
+    "torchvision>=0.8.2",
+    "imageio-ffmpeg",
+    "pyyaml",
+    "requests",
+    "timm",
+    "yapf",
+]
+
+[project.urls]
+Homepage = "https://github.com/emanuele-artioli/ProPainter"
+
+[project.scripts]
+propainter-infer = "propainter.inference_propainter:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["propainter", "propainter.*"]
