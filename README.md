@@ -2,7 +2,7 @@
 
 <div class="logo">
    <a href="https://shangchenzhou.com/projects/ProPainter/">
-      <img src="assets/propainter_logo1_glow.png" style="width:180px">
+      <img src="assets/propainter_logo1_glow.png" style="width: 180px">
    </a>
 </div>
 
@@ -164,6 +164,16 @@ If you want to specify the video resolution for processing or avoid running out 
 python inference_propainter.py --video inputs/video_completion/running_car.mp4 --mask inputs/video_completion/mask_square.png --height 320 --width 576 --fp16
 ```
 
+#### 💃🏻 Interactive Demo
+
+We also provide an interactive demo for object removal, allowing users to select any object they wish to remove from a video. You can try the demo on [Hugging Face](https://huggingface.co/spaces/sczhou/ProPainter) or run it [locally](https://github.com/sczhou/ProPainter/tree/main/web-demos/hugging_face). 
+
+<div align="center">
+  <img src="./web-demos/hugging_face/assets/demo.gif" alt="Demo GIF" style="max-width: 512px; height: auto;">
+</div>
+
+*Please note that the demo's interface and usage may differ from the GIF animation above. For detailed instructions, refer to the [user guide](https://github.com/sczhou/ProPainter/blob/main/web-demos/hugging_face/README.md).*
+
 ### 🚀 Memory-efficient inference
 
 Video inpainting typically requires a significant amount of GPU memory. Here, we offer various features that facilitate memory-efficient inference, effectively avoiding the Out-Of-Memory (OOM) error. You can use the following options to reduce memory usage further:
@@ -288,11 +298,34 @@ Please `--save_results` for further [evaluating temporal warping error](https://
 
 ## License
 
-This project is licensed under <a rel="license" href="./LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.
+#### Non-Commercial Use Only Declaration
+The ProPainter is made available for use, reproduction, and distribution strictly for non-commercial purposes. The code and models are licensed under <a rel="license" href="./LICENSE">NTU S-Lab License 1.0</a>. Redistribution and use should follow this license.
 
+For inquiries or to obtain permission for commercial use, please consult Dr. Shangchen Zhou (shangchenzhou@gmail.com).
+
+
+## Projects that use ProPainter
+
+If you develop or use ProPainter in your projects, feel free to let me know. Also, please include this [ProPainter](https://github.com/sczhou/ProPainter) repo link, authorship information, and our [S-Lab license](https://github.com/sczhou/ProPainter/blob/main/LICENSE) (with link).
+
+#### Projects/Applications from the Community
+
+- Streaming ProPainter: https://github.com/osmr/propainter
+- Faster ProPainter: https://github.com/halfzm/faster-propainter
+- ProPainter WebUI: https://github.com/halfzm/ProPainter-Webui
+- ProPainter ComfyUI: https://github.com/daniabib/ComfyUI_ProPainter_Nodes
+- Cutie (video segmentation): https://github.com/hkchengrex/Cutie
+- Cinetransfer (character transfer): https://virtualfilmstudio.github.io/projects/cinetransfer
+- Motionshop (character transfer): https://aigc3d.github.io/motionshop
+
+
+
+#### PyPI
+- propainter: https://pypi.org/project/propainter
+- pytorchcv: https://pypi.org/project/pytorchcv
 
 ## Contact
-If you have any questions, please feel free to reach me out at `shangchenzhou@gmail.com`. 
+If you have any questions, please feel free to reach me out at shangchenzhou@gmail.com. 
 
 ## Acknowledgement
 
