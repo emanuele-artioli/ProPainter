@@ -11,3 +11,19 @@ if str(PACKAGE_ROOT) not in sys.path:
 
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 WEIGHTS_DIR.mkdir(parents=True, exist_ok=True)
+
+# Expose the main API
+from .inference_propainter import (
+    inpaint,
+    InpaintingConfig,
+    ProPainterModel,
+)
+
+__all__ = [
+    "inpaint",
+    "InpaintingConfig", 
+    "ProPainterModel",
+    "PACKAGE_ROOT",
+    "RESULTS_DIR",
+    "WEIGHTS_DIR",
+]
